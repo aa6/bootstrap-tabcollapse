@@ -88,6 +88,7 @@
         $panelBodies.each(function(){
             var $panelBody = $(this),
                 $tabPane = $panelBody.data('bs.tabcollapse.tabpane');
+            $panelBody.parent().hasClass("in") ? $tabPane.addClass("active") : $tabPane.removeClass("active");
             $tabPane.append($panelBody.contents().detach());
         });
         this.$accordion.html('');
